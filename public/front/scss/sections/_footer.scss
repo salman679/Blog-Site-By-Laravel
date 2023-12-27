@@ -1,0 +1,119 @@
+.footer {
+    background-color: #212121;
+
+    .footer-header {
+        padding: 100px 0 40px;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $body-color;
+
+        .logo {
+            padding-left: 0;
+
+            @media (max-width: 767.98px) {
+                text-align: center;
+            }
+        }
+
+        .subscribe h2 {
+            font-family: $title-font;
+            font-size: 24px;
+            font-weight: 700;
+            color: $white-color;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-align: right;
+            margin-bottom: 0;
+
+            @media (max-width: 767.98px) {
+                text-align: center;
+            }
+        }
+
+        .form {
+            padding-right: 0;
+
+            form {
+                margin-left: 20px;
+                border-bottom: 1px solid $body-color;
+                position: relative;
+                padding-bottom: 3px;
+
+                @media (max-width: 767.98px) {
+                    margin-left: 0;
+                    margin: 0 auto;
+                    width: 80%;
+                    text-align: center;
+                }
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                    color: $white-color;
+
+                    &::placeholder {
+                        color: $body-color;
+                    }
+                }
+
+                button {
+                    position: absolute;
+                    background-color: transparent;
+                    color: $body-color;
+                    border: none;
+                    display: inline-block;
+                    right: 0;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-content {
+        padding: 50px 0 20px;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 767.98px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copyright {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .page-list {
+            display: flex;
+            margin-left: auto;
+
+            @media (max-width: 767.98px) {
+                margin-left: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            li {
+                a {
+                    color: $body-color;
+                    font-size: 13px;
+                    font-weight: normal;
+                    margin-right: 10px;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

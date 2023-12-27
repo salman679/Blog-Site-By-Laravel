@@ -1,0 +1,245 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 118px;
+    background-color: #fff;
+    z-index: 9999;
+
+    @media (max-width: 767.98px) {
+        height: 100px;
+    }
+
+    .topber {
+        background-color: black;
+
+        .topber-container {
+            display: flex;
+            justify-content: space-between;
+
+            @media (max-width: 767.98px) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                padding-left: 0;
+
+                li {
+                    margin-right: 10px;
+                    padding: 10px 0;
+                    font-family: $body-font;
+                    font-style: 12px;
+
+                    a {
+                        color: #fff;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .top-bar-list {
+                li {
+                    a {
+                        transition: all .3s;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-menu {
+        margin-top: 15px;
+
+        .menu-content {
+            display: flex;
+            // align-items: center;
+            justify-content: center;
+
+            .menu-list {
+                margin-left: auto;
+                display: flex;
+
+                li {
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin: 10px;
+
+                    a {
+                        color: $title-color;
+                        padding: 5px;
+                        transition: all .3s;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+
+                        &.active {
+                            color: $primary-color;
+                        }
+                    }
+                }
+
+                @media (max-width: 767.98px) {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 100vh;
+                    background-color: $primary-color;
+                    z-index: 99999;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all .3s;
+                    transform: translateX(100%);
+                    z-index: 1;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateX(0);
+                    }
+
+                    li {
+
+                        a,
+                        a.active {
+                            font-size: 20px;
+                            color: #fff;
+
+                            &:hover {
+                                color: $title-color;
+                            }
+
+                            &.active {
+                                color: $title-color;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .search {
+                @media (max-width: 767.98px) {
+                    margin-left: auto;
+                }
+
+                margin-top: 10px;
+                margin-left: 10px;
+
+                a {
+                    color: #000;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+
+                .search-area {
+                    position: absolute;
+
+                    top: 50%;
+                    left: 50%;
+                    height: 100vh;
+                    z-index: 1;
+                    transform: translate(-50%, 40%);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s;
+
+                    &.active {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    form {
+                        display: flex;
+                        align-items: center;
+
+                        input {
+                            background-color: transparent;
+                            // display: block;
+                            width: 100%;
+                            font-size: 36px;
+                            color: #fff;
+                            border: none;
+                            border-bottom: 1px solid $body-color;
+                        }
+
+                        button {
+                            background-color: transparent;
+                            border: none;
+                            color: $body-color;
+                            margin-left: -27px;
+                            right: 0;
+                            font-size: 27px;
+                            font-weight: 800;
+
+                            &:hover {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+
+                .overflow {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba($color: $title-color, $alpha: 0.9);
+                    width: 100%;
+                    height: 100vh;
+                    opacity: 0;
+                    visibility: hidden;
+                    // z-index: -1;
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .ovarflow {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba($color: $title-color, $alpha: 0.9);
+                width: 100%;
+                height: 100vh;
+                opacity: 0;
+                visibility: hidden;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.mobil-icon {
+    width: 35px;
+    height: 36px;
+    background-color: $primary-color;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+}
